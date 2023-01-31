@@ -1,13 +1,20 @@
 
 
-list_employees = []
+profession_employees = {}
 
 def get_employees():
-    global list_employees
+    global profession_employees
     name = input('Введите имя сотрудника: ')
     surname = input('Введите фамилию сотрудника: ')
-    list_employees.append(name + ' ' + surname)
+    employer = name + ' ' + surname
+    profession = input('Назначить должность сотруднику Программист/Менеджер/Тестировщик: ')
+    if profession == 'Программист' or profession == 'Менеджер' or profession == 'Тестировщик':
+        profession_employees = {employer: profession}
+        print('Сотрудник назначен')
+        return profession_employees
+    else:
+        profession_employees = {}
+        print('Сотрудник аутсайдер  - уволен')
+        return profession_employees
 
-
-get_employees()
-print(list_employees)
+# print(profession_employees)
