@@ -16,5 +16,3 @@ def get_employees():
         profession_employees = {}
         print('Сотрудник аутсайдер  - уволен')
         return profession_employees
-
-# print(profession_employees)
